@@ -1,0 +1,529 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(../Poppins/Poppins-Bold.ttf);
+}
+
+/**{9
+    overflow: hidden;
+    border: 1px solid yellow;
+} */
+
+body {
+    
+   font-family: myFirstFont;
+   cursor: default;
+
+}
+
+
+/* website scrollbar */
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0f26bb;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #d4e210a4 !important;
+    border: 5px solid #16f33079 !important;
+    border-radius: 1px !important;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+ background-image:linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url("../images/schoolimg.jpg");
+ background-position: center;
+ background-size: cover;
+ position: relative;
+
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+naV img {
+    width: 150PX;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff0000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* icon display none*/
+
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: relative;
+    top: 35%;
+    left: 55%;
+    transform: translate(-59%, 50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.hero-btn {
+    width: 100%;
+    border: 0;
+    border: 2px solid rgb(201, 164, 16);
+    padding: 10px;
+    border-radius: 3px;
+    height: 10px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background: rgb(229, 108, 10);
+}
+
+.icon {
+    display: none;
+}
+
+/* course */
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 300;
+}
+p{
+    color:#777;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background:#fff3f3 ;
+    border-radius: 10px;
+    margin-bottom: 5%;
+  padding: 20px 12px;
+box-sizing: border-box;
+transition: 0.5s;
+}
+.course-col:hover{
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.7);
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+
+/* Campus  */
+
+.campus{
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+.layer{
+    background: transparent;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background:rgba(0, 245, 253, 0.534) ;
+}
+
+.layer h3{
+width: 100%;
+font-weight: 500;
+color: #fff;
+font-size: 26px;
+bottom: 0%;
+left: 50%;
+transform: translate(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+
+.layer:hover h3{
+    opacity: 1;
+    bottom: 40%;
+}
+
+
+/* facility */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden; 
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+.facilities-col img:hover{
+    box-shadow: 3.5px 5px 15px 10px rgba(0, 0, 0, 0.308);
+}
+
+.facilities-col p{
+    padding: 0%
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/* Call to Action */
+.ctn{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/schoolimg.jpg);
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    transition: 0.5s ease;
+}
+.ctn:hover{
+    margin: 100px auto;
+    width: 80%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/schoolimg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 100px 0;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.664);
+
+}
+.ctn h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -50px;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+
+:root {
+    --white: #fff;
+    --text-clr: #0000024;
+    --primary: #3e2093;
+    --secondary: #000008;
+    --input-bg: #f1f1ff;
+    --btn-hvr: #1a0065;
+    --tra: rgba(255, 255, 255, 0, 0.959);
+    --bordcolor: rgba(0, 26, 255, 0.082);
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: myFirstFont;
+}
+
+body {
+    font-size: 14px;
+    color: var(--text-clr);
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.r_form_wrap {
+    width: 500px;
+    max-width: 100%;
+}
+
+.r_form_wrap .title {
+    padding: 25px;
+    background: var(--white);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.r_form_wrap .title p {
+    font-size: 25px;
+    text-align: center;
+    font-family: bold;
+}
+
+.r-form {
+    padding: 40px;
+    border-radius: 3px;
+    background: var(--tra);
+    background: #fa2424;
+}
+
+.r-form .input_wrap {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.r-form .input_wrap label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.r_form .input_wrap .input_item {
+    position: relative;
+    width: 100%;
+}
+
+.r_form .input_wrap .input_item .input {
+    width: 100%;
+    border-radius: 3px;
+    height: 40px;
+    border: 2px solid var(--input-bg);
+    background: var(--input-bg);
+    padding: 10px 20px;
+    padding-left: 50px;
+    transition: 0.5s ease;
+    color: var(--secondary);
+    border-color: var(--bordcolor);
+}
+
+.r_form .input_wrap .input_item .input:focus {
+    border-color: var(--primary);
+}
+
+.r_form .input_wrap .input_item .icon {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    color: var(--secondary);
+    font-size: 16px;
+}
+
+#icon {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    color: var(--secondary);
+}
+
+.r_form .input_wrap .input_radio {
+    display: flex;
+}
+
+.r_form .input_wrap .input_radio .input_radio_item {
+    background: var(--input-bg);
+    margin-right: 25px;
+    padding: 20px;
+    border-radius: 3px;
+    position: relative;
+    width: 100px;
+}
+
+.r_form .input_wrap .input_radio .input_radio_item .radio_mark .i {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.r_form .input_wrap .input_radio .input_radio_item .radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.r_form .input_wrap .input_radio .input_radio_item .radio:checked~.radio_mark {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+
+.button {
+    width: 100%;
+    border: 0;
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 3px;
+    height: 40px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.button:hover {
+    background: var(--btn-hvr);
+}
+
+/* i dont this code related */
+
+.none_div {
+    height: 100px;
+}
+
+ /* Course  */
+ #course {
+    border-color: var(--bordcolor);
+}
+
+#course:focus {
+    border-color: var(--primary);
+}
+
+.r_form .input_wrap .input_item {
+    position: relative;
+    width: 100%;
+}
+
+.r_form .input_wrap .input_item .input {
+    width: 100%;
+    border-radius: 3px;
+    height: 40px;
+    border: 2px solid var(--input-bg);
+    background: var(--input-bg);
+    padding: 10px 20px;
+    padding-left: 50px;
+    transition: 0.5s ease;
+    color: var(--secondary);
+    border-color: var(--bordcolor);
+}
+
+
+.clear_ad {
+    margin-top: 10px;
+    border-radius: 3pc;
+    height: 40px;
+    padding: 10px;
+    color: var(--white);
+    background: var(--btn-hvr);
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.clear_ad:hover {
+    background: var(--primary) 
+} 
+ 

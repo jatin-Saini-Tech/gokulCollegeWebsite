@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="../images/gokul.jpg" id="logo-img" class="img"></a>
+
+            <div class="nav-links" id="navLinks">
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Admission</a></li>
+                    <li><a href="index.html">Course</a></li>
+                    <li><a href="index.html">Fees</a></li>
+                    <li><a href="contact_us.html">Contact us</a></li>
+                </ul>
+            </div>
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+
+
+
+        <div class="wrapper">
+            <div class="r_form_wrap">
+                <div class="title">
+                    <p>Admission Form</p>
+                </div>
+
+
+                <!--admission form-->
+                <div class="r_form">
+                    <form method="post" onsubmit="sendmail(); reset(); return false;">
+
+                        <div class="input_wrap">
+                            <label for="yourname">Your name</label>
+
+                            <div class="input_item">
+                                <i class="fa fa-user" id="icon"></i>
+                                <input type="number" name="your name" class="input" id="yourname"
+                                    placeholder="Enter the name" required>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="input_wrap">
+                            <label for="emailaddress">Email Address</label>
+
+                            <div class="input_item">
+                                <i class="fa fa-envelope" id="icon"></i>
+                                <input type="text" name="email address" class="input" id="emailaddress"
+                                    placeholder="Enter the Email ID" required>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap">
+                            <label for="phone">phone</label>
+
+                            <div class="input_item">
+                                <i class="fa fa-phone-square" id="icon"></i>
+                                <input type="number" name="phone" class="input" id="phone"
+                                    placeholder="Ente the Mobile Number" required>
+                            </div>
+                        </div>
+
+
+                        <div class="input_wrap">
+                            <label>Gender</label>
+                            <div class="input_radio">
+
+
+                                <div class="input_radio_item">
+                                    <input type="radio" id="Male" name="gender" class="radio" value="Male">
+                                    <label for="Male" class="radio_mark">
+                                        <ion-icon class="i" name="female-sharp"></ion-icon>
+                                        Male
+                                    </label>
+
+                                </div>
+
+
+                                <div class="input_radio_item">
+                                    <input type="radio" id="female" name="gender" class="radio" value="female">
+                                    <label for="female" class="radio_mark">
+                                        <ion-icon class="i" name="female-sharp"></ion-icon>
+                                        Female
+                                    </label>
+                                </div>
+
+                                <div class="input_radio_item">
+                                    <input type="radio" id="others" name="gender" class="radio" value="others">
+                                    <label for="others" class="radio_mark">
+                                        <ion-icon class="i" name="male-female-sharp"></ion-icon>
+                                        others
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap">
+                            <label for="dob">Date of Birth</label>
+                            <div class="input_item">
+                                <i class="fa fa-calendar" id="icon"></i>
+                                <input type="date" name="dob" class="input" id="dob" required>
+                            </div>
+                        </div>
+
+
+                        <div class="input_wrap">
+                            <label for="course">course</label>
+                            <div class="input_item">
+                                <i class="fa fa-caret-square-o-down" aria-hidden="true" id="icon"></i>
+
+                                <select id="course" name="cars" class="input" required>
+                                    <option value="select">Select the course</option>
+                                    <option value="bca">BCA</option>
+                                    <option value="bscit">Bsc IT</option>
+                                    <option value="bscca&it">Bsc CA & IT</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap">
+                            <label for="password">Password</label>
+                            <div class="input_item">
+                                <i class="fa fa-key" id="icon"></i>
+                                <input type="password" name="password" class="input" id="password"
+                                    placeholder="Enter the password">
+                            </div>
+                        </div>
+
+                        <div class="input_wrap">
+                            <label for="confirmpassword">Conform Password</label>
+                            <div class="input_item">
+                                <i class="fa fa-check-circle" id="icon"></i>
+                                <input type="password" name="confirm password" class="input" id="confirmpassword"
+                                    placeholder="Enter the confirm password">
+                            </div>
+                        </div>
+
+                        <input type="submit" class="button" value="Register Now">
+                        <div></div>
+                        <input type="reset" class="clear_ad" value="clear">
+
+                    </form>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        </div>
+
+    </section>
+    <div class="none_div">
+
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

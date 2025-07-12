@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online pay fees</title>
+    <link rel="stylesheet" href="Fees.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="../images/gokul.jpg" id="logo-img" class="img"></a>
+
+            <div class="nav-links" id="navlinks">
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AdmissionPage.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Course</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <form onsubmit="pay()">
+            <div class="wrapper">
+                <div class="r_form_wrap">
+                    <div class="title">
+                        <p id="header_fees">Online Pay Fees</p>
+                    </div>
+
+                    <!--admission form-->
+                    <div class="r_form">
+                        <form method="post" onsubmit="sendmail(); reset(); return false;">
+                            <div class="input_wrap">
+                                <label for="yourname">Course</label>
+                                <i class="fa fa-bars" aria-hidden="true" id="icon"></i>
+                                <select id="course" name="cars" class="input" required>
+                                    <option value="select">Select the Course</option>
+                                    <option value="bca" id="bcabatch">BCA 2021-2022 Batch</option>
+                                </select>
+                                <br>
+                                <br>
+                                <label for="yourname">Your UID/Enrollment no</label>
+                                <div class="input_item">
+                                    <i class="fa fa-list-ol" aria-hidden="true" id="icon"></i>
+                                    <input type="number" class="input" id="uid"
+                                        placeholder="Enter the last two UID digit">
+                                </div>
+                            </div>
+                            <p id="uid_detail">Ex: FCAB2101101001 to enter the: 01</p>
+                            <input type="button" class="button" value="Get" onclick="getInputValue()">
+                            <br>
+                            <br>
+
+                            <div class="input_wrap">
+                                <label for="yourname">Student name</label>
+                                <div class="input_item">
+                                  <i class="fa fa-user" id="icon"></i>
+                                  <p id="demo" class="input" ></p>
+                    </div>
+                              </div>
+
+                            <div class="input_wrap">
+                                <label for="yourname">Pending Fees Detail</label>
+                                <div class="input_item">
+                                    <i class="fa fa-credit-card" id="icon"></i>
+                                    <p id="demo1" class="input"></p>
+
+                                </div>
+                            </div>
+
+                            <input type="button" class="button" value="pay Fees" onclick="sendmail()">
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div class="none_div">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="../images/gokul.jpg" id="logo-img"></a>
+
+
+            <div class="nav-links" id="navLinks">
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AdmissionPage.html">Admission</a></li>
+                    <li><a href="index.html#course_call">Course</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="contact.htmlContact">Contact</a></li>
+                </ul>
+            </div>
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <div class="wrapper">
+            <div class="r_form_wrap">
+                <div class="title">
+                    <p>Contact form</p>
+                </div>
+                <!--admission form-->
+
+                <div class="r_form">
+                    <form onsubmit="sendmail(); return false;"></form>
+                        <div class="input_wrap">
+                            <label for="yourname">Your Name</label>
+                            <div class="input_item">
+                                <i class="fa fa-user" id="icon"></i>
+                                <input type="text" name="Your name" class="input" id="yourname" placeholder="Enter the name required">
+                            </div>
+                        </div>
+                        
+                        <div class="input_wrap">
+                            <label for="emailaddress">Email Address</label>
+                            <div class="input_item">
+                                <i class="fa fa-envelope" id="icon"></i>
+                                <input type="email" name="email address" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
+                            </div>
+                        </div>
+
+                        <div class="input_wrap">
+                            <label for="Phone"></label>
+                            <div class="input_item">
+                                <i class="fa fa-commenting" id="icon"></i>
+                                <textarea name="phone" class="mess" id="phone" placeholder="Write your message..." size="500"></textarea>
+                            </div>
+                        </div>
+                        
+                        <input type="submit" class="button" value="Send Messege">
+                        <div></div>
+                        <input type="reset" class="clear_ad" value="Clear">            
+                    </form>
+                </div>
+            </div>
+        </div>
+
+ 
+         
+
+    </section>
+   
+</body>
+<script src="app.js"></script>
+<!-- <script>
+    function sendmail(){
+		Email.send({}).then(
+	message => alert("Your Message Is Successful - Team GGU")
+);
+		}
+    </script>
+<script>
+    var navLinks= document.getElementById("navLinks");
+
+function showmenu(){
+    navLinks.style.right="0";
+}   
+function hidemenu(){
+    navLinks.style.right="-200px";
+}
+</script> -->
+</html>
+
