@@ -1,2 +1,3 @@
 # gokulCollegeWebsite
-this is my repository
+this is my college website
+Author- jatin saini
